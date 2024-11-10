@@ -9,8 +9,9 @@ A Go program that demonstrates concurrent vs sequential image processing using g
 - Compares processing performance
 
 ## Setup
+Install required image resizing package:
 ```bash
-go get github.com/nfnt/resize # Required external package for image resizing
+go get github.com/nfnt/resize   # Required external package for image resizing
 ```
 
 ## Directory Structure
@@ -18,8 +19,8 @@ go get github.com/nfnt/resize # Required external package for image resizing
 .
 ├── image_processing/          # Core processing functions and tests
 ├── main.go                   # Main program
-├── images/                   # Input images
-└── images/output/            # Processed images
+├── images/                   # Input images (put your .jpg files here)
+└── images/output/            # Processed images (results saved here)
 ```
 
 ## Run Processing Tests
@@ -33,6 +34,8 @@ go run main.go -mode=sequential
 # Test concurrent processing only
 go run main.go -mode=concurrent
 ```
+
+Note: All processed images are saved to `images/output/` regardless of processing mode. The modes only affect processing speed, not the output files.
 
 Sample Output:
 ```
