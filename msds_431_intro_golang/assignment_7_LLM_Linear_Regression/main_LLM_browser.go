@@ -27,13 +27,18 @@ var anscombe = map[string][]float64{
 
 // RegressionResults holds the results of the regression analysis
 type RegressionResults struct {
-	Intercept  float64
-	Slope      float64
-	RSquared   float64
-	RMSE       float64
-	FStatistic float64
-	TStatistic float64
-	PValue     float64
+	Intercept          float64
+	Slope              float64
+	RSquared           float64
+	AdjustedRSquared   float64
+	RMSE               float64
+	MAE                float64
+	FStatistic         float64
+	TStatistic         float64
+	PValue             float64
+	ConfidenceInterval [2]float64
+	PredictionInterval [2]float64
+	StandardError      float64
 }
 
 func main() {
@@ -67,6 +72,17 @@ func calculateRegression(x, y []float64) RegressionResults {
 	mse := residualVariance / float64(len(x)-2)
 	rmse := math.Sqrt(mse)
 
+	// Calculate Mean Absolute Error (MAE)
+	var maeSum float64
+	for _, res := range residuals {
+		maeSum += math.Abs(res)
+	}
+	mae := maeSum / float64(len(residuals))
+
+	// Calculate Adjusted R-squared
+	n := float64(len(x))
+	adjustedRSquared := 1 - ((1-rSquared)*(n-1))/(n-1-1)
+
 	// Calculate F-statistic
 	totalVariance := sumOfSquares(y)
 	explainedVariance := totalVariance - residualVariance
@@ -86,15 +102,26 @@ func calculateRegression(x, y []float64) RegressionResults {
 	tDist := distuv.StudentsT{Mu: 0, Sigma: 1, Nu: df}
 	pValue := 2 * (1 - tDist.CDF(math.Abs(tStat)))
 
+	// Confidence interval for slope
+	confInterval := [2]float64{beta - 1.96*standardError, beta + 1.96*standardError}
+
+	// Prediction interval for new observations (assuming x-bar ± 2 standard deviations)
+	predictionInterval := [2]float64{alpha + beta*(meanX-2*standardError), alpha + beta*(meanX+2*standardError)}
+
 	// Return the results
 	return RegressionResults{
-		Intercept:  alpha,
-		Slope:      beta,
-		RSquared:   rSquared,
-		RMSE:       rmse,
-		FStatistic: fStat,
-		TStatistic: tStat,
-		PValue:     pValue,
+		Intercept:          alpha,
+		Slope:              beta,
+		RSquared:           rSquared,
+		AdjustedRSquared:   adjustedRSquared,
+		RMSE:               rmse,
+		MAE:                mae,
+		FStatistic:         fStat,
+		TStatistic:         tStat,
+		PValue:             pValue,
+		ConfidenceInterval: confInterval,
+		PredictionInterval: predictionInterval,
+		StandardError:      standardError,
 	}
 }
 
@@ -114,10 +141,14 @@ func printResults(setNumber int, results RegressionResults) {
 	fmt.Printf("Intercept: %.4f\n", results.Intercept)
 	fmt.Printf("Slope: %.4f\n", results.Slope)
 	fmt.Printf("R-squared: %.4f\n", results.RSquared)
+	fmt.Printf("Adjusted R-squared: %.4f\n", results.AdjustedRSquared)
 	fmt.Printf("RMSE: %.4f\n", results.RMSE)
+	fmt.Printf("MAE: %.4f\n", results.MAE)
 	fmt.Printf("F-statistic: %.4f\n", results.FStatistic)
 	fmt.Printf("t-statistic: %.4f\n", results.TStatistic)
-	fmt.Printf("p-value: %.4f\n\n", results.PValue)
+	fmt.Printf("p-value: %.4f\n", results.PValue)
+	fmt.Printf("95%% Confidence Interval for Slope: [%.4f, %.4f]\n", results.ConfidenceInterval[0], results.ConfidenceInterval[1])
+	fmt.Printf("Prediction Interval: [%.4f, %.4f]\n\n", results.PredictionInterval[0], results.PredictionInterval[1])
 }
 
 func plotData(setNumber int, x, y []float64, results RegressionResults) {

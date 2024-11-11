@@ -16,9 +16,12 @@ This project implements linear regression on Anscombe's Quartet using Go. It com
 ## Running the Program
 To run the regression on all datasets (`x1`, `x2`, `x3`, `x4`):
 ```bash
-go run main.go
+go run main_copilot.go
+
+go run main_LLM_browser.go
 ```
-This prints results including intercept, slope, R-squared, RMSE, F-statistic, t-statistic, and p-value.
+The co-pilot uses github co-pilot to adjust the code.
+The LLM_Browser uses Chat GPT browser interface to adjust the code.   (ChatGPT_Conversation.txt) for conversation
 
 ## Running Unit Tests
 To verify regression results:
@@ -41,3 +44,23 @@ However, data scientists may find Go's statistical ecosystem less mature compare
 
 ## Challenges Faced
 During development, some differences were noted in how calculations like regression coefficients, p-values, and rounding were handled between Go and Python/R. These differences stem from how floating-point precision is handled across languages and their respective libraries. Careful handling of these discrepancies was necessary to ensure comparable results across different platforms.
+
+
+
+## Assignment 7 Write-up
+
+### Co-Pilot (GPT 4o)
+I didnt really like copilot and AI directly itegrated into my code. Atleast for this assignment. There is too much is going on in a single tool. I would rather have items segmented out. Although, when playing around with some of the inline auto suggestions I liked it. If I were to use something in a business setting, I probably would try cursor. My associates have good things to say about it. One of the problems I saw with this method, is that it changed the calculations for F, T, and P.
+
+### Browser Chat (GPT 4o) https://chatgpt.com
+(ChatGPT_Conversation.txt) for conversation
+
+For me, I think splitting IDE and AI into seperate windows and interfaces helped me get a better results. I learned from the co-pilot attempt as well, and made adjustments from the get-go.
+It produced a number of other metrics while keeping to my strict guidelines.
+
+### Manual Coding and General Thoughts
+Manual coding is essential for thoroughly learning a language and understanding its intricacies. However, once a developer becomes proficient, leveraging AI tools becomes invaluable. Routine code functions that would typically take 30 minutes can be completed by an AI agent in seconds, saving time and reducing mental strain. Using natural language prompts with AI agents can enhance code readability through better variable naming, inline comments, and alternative coding approaches. These agents also assist in learning, refactoring, and quickly implementing ideas for new use cases. I recommend a hybrid approach for all developers—manual coding to deepen knowledge and AI assistance to boost productivity. Just as mathematicians now use advanced tools like Excel or Python instead of solely relying on calculators, developers should embrace AI agents to streamline their workflow and enhance output.
+
+### Future Assignment Thoughts
+Students need to be warned to sign up for github Co-Pilot 2 weeks in advanced. Github takes up to 9 days to process the free student version.
+Guidelines need to be be moved from copy paste, to specific to the assignment. I would think I am going to be graded on other items other than the guidelines provided for this assignment
