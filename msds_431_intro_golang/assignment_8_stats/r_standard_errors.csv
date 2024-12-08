@@ -1,0 +1,4 @@
+"Distribution","SampleSize","SEMedian"
+"positively_skewed",25,0.191963146690983
+"symmetric",25,0.275861813154195
+"negatively_skewed",25,0.281792677860852

@@ -1,0 +1,62 @@
+INFO: 2024/12/07 20:00:45 main.go:282: Starting bootstrap analysis
+INFO: 2024/12/07 20:00:45 main.go:291: Processing symmetric distribution
+DEBUG: 2024/12/07 20:00:45 main.go:61: Loaded 25 data points from symmetric_data_25.csv
+DEBUG: 2024/12/07 20:00:45 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:00:45 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:00:45 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:00:45 main.go:321: Completed symmetric distribution analysis
+INFO: 2024/12/07 20:00:45 main.go:291: Processing positively_skewed distribution
+DEBUG: 2024/12/07 20:00:45 main.go:61: Loaded 25 data points from positively_skewed_data_25.csv
+DEBUG: 2024/12/07 20:00:45 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:00:45 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:00:45 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:00:45 main.go:321: Completed positively_skewed distribution analysis
+INFO: 2024/12/07 20:00:45 main.go:291: Processing negatively_skewed distribution
+DEBUG: 2024/12/07 20:00:45 main.go:61: Loaded 25 data points from negatively_skewed_data_25.csv
+DEBUG: 2024/12/07 20:00:45 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:00:45 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:00:45 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:00:45 main.go:321: Completed negatively_skewed distribution analysis
+INFO: 2024/12/07 20:00:45 main.go:338: Analysis completed successfully
+INFO: 2024/12/07 20:04:02 main.go:282: Starting bootstrap analysis
+INFO: 2024/12/07 20:04:02 main.go:291: Processing symmetric distribution
+DEBUG: 2024/12/07 20:04:02 main.go:61: Loaded 25 data points from symmetric_data_25.csv
+DEBUG: 2024/12/07 20:04:02 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:04:02 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:04:02 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:04:02 main.go:321: Completed symmetric distribution analysis
+INFO: 2024/12/07 20:04:02 main.go:291: Processing positively_skewed distribution
+DEBUG: 2024/12/07 20:04:02 main.go:61: Loaded 25 data points from positively_skewed_data_25.csv
+DEBUG: 2024/12/07 20:04:02 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:04:02 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:04:02 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:04:02 main.go:321: Completed positively_skewed distribution analysis
+INFO: 2024/12/07 20:04:02 main.go:291: Processing negatively_skewed distribution
+DEBUG: 2024/12/07 20:04:02 main.go:61: Loaded 25 data points from negatively_skewed_data_25.csv
+DEBUG: 2024/12/07 20:04:02 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:04:02 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:04:02 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:04:02 main.go:321: Completed negatively_skewed distribution analysis
+INFO: 2024/12/07 20:04:02 main.go:329: Analysis completed successfully
+INFO: 2024/12/07 20:04:02 main.go:345: Analysis completed successfully
+INFO: 2024/12/07 20:04:26 main.go:282: Starting bootstrap analysis
+INFO: 2024/12/07 20:04:26 main.go:291: Processing symmetric distribution
+DEBUG: 2024/12/07 20:04:26 main.go:61: Loaded 25 data points from symmetric_data_25.csv
+DEBUG: 2024/12/07 20:04:26 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:04:26 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:04:26 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:04:26 main.go:321: Completed symmetric distribution analysis
+INFO: 2024/12/07 20:04:26 main.go:291: Processing positively_skewed distribution
+DEBUG: 2024/12/07 20:04:26 main.go:61: Loaded 25 data points from positively_skewed_data_25.csv
+DEBUG: 2024/12/07 20:04:26 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:04:26 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:04:26 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:04:26 main.go:321: Completed positively_skewed distribution analysis
+INFO: 2024/12/07 20:04:26 main.go:291: Processing negatively_skewed distribution
+DEBUG: 2024/12/07 20:04:26 main.go:61: Loaded 25 data points from negatively_skewed_data_25.csv
+DEBUG: 2024/12/07 20:04:26 main.go:86: Loaded 100x25 indices from resampling_indices_25.csv
+DEBUG: 2024/12/07 20:04:26 main.go:201: Debug Median Calculation for 25 values
+DEBUG: 2024/12/07 20:04:26 main.go:201: Debug Median Calculation for 25 values
+INFO: 2024/12/07 20:04:26 main.go:321: Completed negatively_skewed distribution analysis
+INFO: 2024/12/07 20:04:26 main.go:328: Analysis completed successfully
+INFO: 2024/12/07 20:04:26 main.go:344: Analysis completed successfully
