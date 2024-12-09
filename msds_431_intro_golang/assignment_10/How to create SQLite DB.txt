@@ -1,0 +1,28 @@
+How to do SQL lite
+
+## NOTE this is where your sql extract files live.  the folder
+cd C:\Users\Andy\Documents\SQLite
+sqlite3.exe "C:\Users\Andy\Documents\Github\Northwestern\msds_431_intro_golang\assignment_10\movies.db"
+
+CREATE TABLE Movies (
+    MovieID INTEGER PRIMARY KEY,
+    Name TEXT NOT NULL,
+    Year INTEGER NOT NULL,
+    Rank REAL
+);
+CREATE TABLE MovieGenres (
+    MovieID INTEGER NOT NULL,
+    GenreName TEXT NOT NULL,
+    PRIMARY KEY (MovieID, GenreName),
+    FOREIGN KEY (MovieID) REFERENCES Movies(MovieID)
+);
+
+
+.import "C:/Users/Andy/Documents/Github/Northwestern/msds_431_intro_golang/assignment_10/files/IMDB-movies.csv" Movies
+.import "C:/Users/Andy/Documents/Github/Northwestern/msds_431_intro_golang/assignment_10/files/IMDB-movies_genres.csv" MovieGenres
+
+DELETE FROM MovieGenres WHERE MovieID = 'movie_id';
+
+UPDATE Movies
+SET Rank = NULL
+WHERE Rank = 'NULL';
