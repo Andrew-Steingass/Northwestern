@@ -38,4 +38,4 @@ To use this package in your Go program, follow these steps:
 
 ## Comparing Results with R
 
-I chose to compare hard coded samples between R and Go. The last assignment I had problems because I went a different route. This will allow a straight comparison between both methods, R and Go. Both methods produce the same results.
+I chose to compare hard coded samples between R and Go. On the last assignment, I had problems because I went a different route. This will allow a straight comparison between both methods, R and Go. Both methods produce the same results.
